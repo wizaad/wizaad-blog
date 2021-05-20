@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load embed_video_tags %}
+
+{% block content %}
+<hr>
+<h2><font face = "courier" size = "7" color = "purple">Welcome to Radio Janette, enjoy the Raw talks</font></h2>
+<div>
+{% for podcast in podcasts %}
+    <div>
+        <h5 class="card-title"><font color = "purple">{{ podcast.title }}</font></h5>
+        <p><font face="Indie Flower" size="3" color="#000000">{{ podcast.description }}</font></p>
+        <iframe src="{{ podcast.my_voice }}" height="200px" width="1200px" frameborder="0" scrolling="no"></iframe>
+    </div>
+
+{%  endfor %}
+</div>
+{% endblock %}
+
