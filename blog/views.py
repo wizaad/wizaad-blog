@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic import ListView
 from .models import Post, Comment
 from .forms import CommentForm
 
@@ -9,6 +10,14 @@ def blog_index(request):
         'posts': posts,
     }
     return render(request, 'blog/blog_home.html', context)
+
+
+class BlogListView(ListView):
+    model = Post
+    template_name = 'blog/blog_home.html'
+    context_object_name = 'posts'
+    paginate_by = 2
+    ordering = ['-created_on']
 
 
 def blog_category(request, category):
@@ -45,3 +54,7 @@ def blog_detail(request, pk):
         'form': form,
     }
     return render(request, 'blog/blog_detail.html', context)
+
+
+def about(request):
+    return render(request, 'blog/about.html')
