@@ -14,12 +14,12 @@ A simple blog app with embeded anchor.fm podcast.
 
 ## Usage
 
-pip3 install -r requirements.txt
-python3 manage.py makemigrations
-python3 manage.py migrate
-python3 manage.py collectstatic
-python3 manage.py createsuperuser # Create a superuser
-python3 manage.py runserver
+* pip3 install -r requirements.txt
+* python3 manage.py makemigrations
+* python3 manage.py migrate
+* python3 manage.py collectstatic
+* python3 manage.py createsuperuser # Create a superuser
+* python3 manage.py runserver
 
 Open a browser to http://127.0.0.1:8000
 
@@ -28,6 +28,7 @@ Open a browser to http://127.0.0.1:8000
 ## Contributors
 
 - Mr Wizaad <wizaad@protonmail.com>
+- Clara Situma
 
 ---
 
